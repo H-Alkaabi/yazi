@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.netlify/
+Sitemap: https://yazi.ae/sitemap.xml
