@@ -862,120 +862,45 @@
   }
 }
 
-@media (max-width: 700px){
+/* =========================================================
+   YAZI — MOBILE FIX v2.6
+   1) إزالة زر "احجزي موعدك" المكرر داخل الهيرو (الشريط السفلي يكفي)
+   2) ضبط مركز صورة الهيرو أفقياً
+   ========================================================= */
 
-  .editorial-hero{
-    height:100svh !important;
-    min-height:650px !important;
-    position:relative;
-    overflow:hidden;
-    background:#9d634a;
+/* غيّري هذي القيمة فقط لضبط الصورة:
+   أقل من 50% = تحريك الصورة لليمين  |  أكثر من 50% = تحريك الصورة لليسار */
+:root{
+  --hero-focus-x:50%;
+  --hero-focus-y:center;
+}
+
+@media(max-width:700px){
+
+  /* 1) زر واحد فقط للحجز في الجوال = الشريط السفلي الثابت */
+  .hero-book-mobile{
+    display:none !important;
   }
 
-  .hero-backdrop{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-    overflow:hidden;
+  /* توازن النص بعد إزالة الزر */
+  .hero-center,
+  .hero-center.reveal{
+    top:60% !important;
+  }
+
+  /* 2) توسيط الصورة أفقياً */
+  .hero-backdrop img{
+    object-position:var(--hero-focus-x) var(--hero-focus-y) !important;
+  }
+}
+
+@media(max-width:430px){
+  .hero-center,
+  .hero-center.reveal{
+    top:61% !important;
   }
 
   .hero-backdrop img{
-    position:absolute;
-    left:50%;
-    top:50%;
-    width:auto !important;
-    height:100% !important;
-    max-width:none !important;
-
-    transform:translate(-50%,-50%) !important;
-
-    object-fit:contain !important;
-    object-position:center center !important;
+    object-position:var(--hero-focus-x) var(--hero-focus-y) !important;
   }
-
-  .hero-center,
-  .hero-center.reveal{
-    position:absolute !important;
-    left:50% !important;
-    top:66% !important;
-    transform:translate(-50%,-50%) !important;
-    width:92vw !important;
-    background:transparent !important;
-  }
-}
-
-.hero-backdrop,
-.hero-backdrop picture,
-.hero-backdrop img {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-backdrop picture {
-    display: block;
-}
-
-.hero-backdrop img {
-    display: block;
-    object-fit: cover;
-    object-position: center center;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .editorial-hero {
-        min-height: 100svh;
-        height: 100svh;
-    }
-
-    .hero-backdrop img {
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    .hero-center {
-        width: calc(100% - 40px);
-        left: 50%;
-        right: auto;
-        top: 59%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .hero-kicker {
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-
-    .hero-center h1 {
-        font-size: clamp(46px, 13vw, 64px);
-        line-height: 0.92;
-        margin: 16px auto 26px;
-    }
-
-    .hero-center h1 em {
-        display: block;
-    }
-
-    .hero-book-mobile {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 170px;
-        height: 58px;
-        padding: 0 30px;
-
-        border: 1px solid rgba(255,255,255,.85);
-        border-radius: 999px;
-
-        color: #fff;
-        background: rgba(70,40,28,.12);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-
-        font-size: 18px;
-        text-decoration: none;
-    }
 }
