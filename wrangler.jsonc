@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "yazi-ae",
+  "name": "yazi",
   "main": "./src/index.js",
   "compatibility_date": "2026-08-11",
   "assets": {
@@ -14,7 +14,7 @@
     {
       "binding": "DB",
       "database_name": "yazi-db",
-      "database_id": "PASTE_D1_DATABASE_ID_HERE",
+      "database_id": "5df9414f-58e1-4db4-9092-701b3e1ff8d2",
       "migrations_dir": "migrations"
     }
   ]
