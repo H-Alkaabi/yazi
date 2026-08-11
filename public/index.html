@@ -67,9 +67,18 @@
 
 <main id="main">
 <section class="hero editorial-hero" id="home">
-  <div class="hero-backdrop" aria-hidden="true">
-    <img src="/assets/hero.png" alt="" width="1600" height="1200" fetchpriority="high">
-  </div>
+ <div class="hero-backdrop" aria-hidden="true">
+  <picture>
+    <source media="(max-width: 768px)" srcset="/assets/hero-mobile.png">
+    <img
+      src="/assets/hero.png"
+      alt=""
+      width="1600"
+      height="1200"
+      fetchpriority="high"
+    >
+  </picture>
+</div>
   <div class="hero-shade" aria-hidden="true"></div>
 
   <div class="hero-center reveal">
