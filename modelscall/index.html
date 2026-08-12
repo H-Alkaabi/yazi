@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>انضمي كمودل | YAZI Makeup Artist</title>
+<meta name="description" content="YAZI تبحث عن وجوه جديدة لجلسات مكياج وتصوير في الإمارات. مكياج احترافي مجاناً وصور جاهزة لحسابك. قدّمي طلبك الآن.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fbf7f3">
+<link rel="canonical" href="https://yazi.ae/model/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AE">
+<meta property="og:title" content="انضمي كمودل مع YAZI">
+<meta property="og:description" content="وجوه جديدة لجلسات مكياج وتصوير — مكياج احترافي مجاناً وصور جاهزة لحسابك.">
+<meta property="og:url" content="https://yazi.ae/model/">
+<meta property="og:image" content="https://yazi.ae/assets/hero.png">
+
+<style>
+:root{
+  --bg:#fbf7f3;--paper:#fffaf7;--blush:#f4e1d5;--blush-2:#ecd1c0;--ink:#36231d;--muted:#806a61;
+  --accent:#dca985;--accent-dark:#a76f52;--line:#ead2c4;--ok:#16834a;--bad:#b33b35;
+  --shadow:0 24px 65px rgba(79,47,34,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal",system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2,h3{font-family:"Aref Ruqaa",serif;font-weight:400;line-height:1.25;margin:0}
+
+/* Header */
+.mh{position:sticky;top:0;z-index:60;background:rgba(251,247,243,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.mh-in{max-width:1180px;margin:auto;height:70px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mh-logo img{width:96px;max-height:46px;object-fit:contain}
+.mh-back{font-size:14px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:2px}
+
+/* Hero */
+.mhero{max-width:1180px;margin:auto;padding:64px 22px 26px;text-align:center}
+.eyebrow{display:inline-block;background:var(--blush-2);color:#6b4b3e;border-radius:999px;padding:6px 16px;font-size:12px;letter-spacing:.14em}
+.mhero h1{font-size:clamp(40px,6.4vw,68px);margin:20px 0 14px}
+.mhero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:18px}
+
+/* Sections */
+.sec{padding:56px 22px}
+.sec-in{max-width:1180px;margin:auto}
+.sec h2{font-size:clamp(30px,4.4vw,44px);margin-bottom:8px}
+.sec .lead{color:var(--muted);margin:0 0 28px;max-width:680px}
+.tint{background:var(--blush)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(255,255,255,.9);border:1px solid rgba(213,173,150,.6);border-radius:26px;padding:28px}
+.card .ic{font-size:26px;color:var(--accent-dark)}
+.card h3{font-size:19px;margin:14px 0 8px}
+.card p{color:var(--muted);font-size:14.5px;margin:0}
+
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px}
+.step span{font-family:"Aref Ruqaa",serif;font-size:30px;color:var(--accent-dark)}
+.step b{display:block;margin:6px 0 4px}
+.step small{color:var(--muted);font-size:13.5px;line-height:1.6}
+
+/* Form */
+.form-wrap{max-width:960px;margin:auto;background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:44px;box-shadow:var(--shadow)}
+.mform{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;margin-top:26px}
+.f{display:flex;flex-direction:column;gap:8px}
+.f.full{grid-column:1/-1}
+.f label{font-size:15px}
+.f input,.f select,.f textarea{width:100%;background:#fff;border:1px solid var(--line);border-radius:999px;padding:14px 18px;outline:none;transition:.2s}
+.f textarea{border-radius:22px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:#b97958;box-shadow:0 0 0 4px rgba(207,142,102,.12)}
+.f .hint{font-size:12.5px;color:var(--muted)}
+.f.err input,.f.err select,.f.err textarea{border-color:var(--bad)}
+.f .msg{font-size:12.5px;color:var(--bad);display:none}
+.f.err .msg{display:block}
+
+fieldset{border:0;padding:0;margin:0}
+legend{font-size:15px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:14px;cursor:pointer;transition:.2s}
+.chip input:checked+span{background:#3b2923;color:#fff;border-color:#3b2923}
+.chip input:focus-visible+span{box-shadow:0 0 0 3px rgba(207,142,102,.3)}
+
+/* Upload */
+.drop{grid-column:1/-1;border:1.5px dashed #cda791;background:#fff9;border-radius:26px;padding:30px 22px;text-align:center;cursor:pointer;transition:.2s}
+.drop:hover,.drop.over{background:#fdf1e9;border-color:var(--accent-dark)}
+.drop .big{font-size:26px;color:var(--accent-dark)}
+.drop b{display:block;margin:8px 0 4px}
+.drop small{color:var(--muted);font-size:13px;display:block;line-height:1.7}
+.drop input{display:none}
+.thumbs{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.thumb{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#f3e6dd;aspect-ratio:3/4}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb button{position:absolute;top:7px;left:7px;width:28px;height:28px;border:0;border-radius:50%;background:rgba(31,18,14,.72);color:#fff;font-size:16px;line-height:1;display:grid;place-items:center}
+.thumb em{position:absolute;bottom:0;right:0;left:0;background:rgba(31,18,14,.66);color:#fff;font-size:11px;font-style:normal;padding:4px 8px;text-align:center}
+
+.consents{grid-column:1/-1;display:grid;gap:12px;background:#fff8f3;border:1px solid var(--line);border-radius:22px;padding:20px}
+.consents label{display:flex;gap:11px;align-items:flex-start;font-size:14px;line-height:1.65;cursor:pointer}
+.consents input{margin-top:6px;accent-color:#a66d51;flex:0 0 auto;width:17px;height:17px}
+.consents a{text-decoration:underline}
+.consents.err{border-color:var(--bad)}
+
+.actions{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.btn{border:1px solid var(--accent-dark);border-radius:999px;padding:14px 32px;background:transparent;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#2f201b}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.status{font-size:14px}
+.status.bad{color:var(--bad)}
+.status.work{color:var(--muted)}
+.hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}
+
+.done{border:1px solid #b9dcca;background:#f0fbf5;border-radius:26px;padding:34px;text-align:center}
+.done .mark{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:#1c8a51;color:#fff;font-size:24px}
+.done h2{font-size:32px}
+.done p{color:#557163;max-width:520px;margin:10px auto 20px}
+.done a{display:inline-flex;background:#3b2923;color:#fff;border-radius:999px;padding:12px 26px;font-size:15px}
+
+.foot{background:#3b2923;color:#f7ebe5;padding:44px 22px 26px;margin-top:10px}
+.foot-in{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px}
+.foot a{border-bottom:1px solid #6e5146}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .cards,.steps{grid-template-columns:1fr 1fr}
+  .form-wrap{padding:32px 24px;border-radius:28px}
+}
+@media(max-width:700px){
+  .mh-in{height:62px;padding:0 16px}
+  .mhero{padding:44px 18px 20px}
+  .mhero p{font-size:16px}
+  .sec{padding:44px 18px}
+  .cards,.steps,.mform{grid-template-columns:1fr}
+  .thumbs{grid-template-columns:1fr 1fr}
+  .form-wrap{padding:26px 18px}
+  .actions .btn{width:100%}
+  .foot-in{flex-direction:column;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <div class="mh-in">
+    <a class="mh-logo" href="/" aria-label="YAZI الرئيسية"><img src="/assets/yazi-logo.png" alt="YAZI Makeup Artist"></a>
+    <a class="mh-back" href="/">العودة للموقع</a>
+  </div>
+</header>
+
+<main>
+
+<section class="mhero">
+  <span class="eyebrow">MODEL CALL</span>
+  <h1>أبحث عن وجوه جديدة</h1>
+  <p>جلسات مكياج وتصوير لبناء لوكات جديدة. مكياج احترافي كامل مجاناً، وصور جاهزة تقدرين تستخدمينها في حسابك — كل اللي أحتاجه منك الوقت والموافقة على نشر الصور.</p>
+</section>
+
+<section class="sec tint">
+  <div class="sec-in">
+    <h2>وش تاخذين</h2>
+    <p class="lead">الجلسة تبادل منفعة — مو عمل تطوعي من طرف واحد.</p>
+    <div class="cards">
+      <div class="card reveal"><div class="ic">✦</div><h3>مكياج احترافي مجاناً</h3><p>لوك كامل بمنتجات أصلية، من الاختيار إلى اللمسة الأخيرة، بدون أي رسوم.</p></div>
+      <div class="card reveal"><div class="ic">♡</div><h3>صور معدّلة لك</h3><p>تستلمين مجموعة صور جاهزة من الجلسة تقدرين تنشرينها في حسابك.</p></div>
+      <div class="card reveal"><div class="ic">✧</div><h3>تجربة تصوير كاملة</h3><p>مناسبة لو حابة تجربين التصوير أول مرة أو تضيفين شغل جديد لبروفايلك.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="sec-in">
+    <h2>كيف تمشي العملية</h2>
+    <div class="steps">
+      <div class="step reveal"><span>١</span><b>تعبّين الطلب</b><small>مع صورتين أو ثلاث بدون مكياج وبإضاءة طبيعية.</small></div>
+      <div class="step reveal"><span>٢</span><b>مراجعة الطلبات</b><small>أختار حسب اللوك المطلوب لكل جلسة. الرد خلال ٣–٥ أيام.</small></div>
+      <div class="step reveal"><span>٣</span><b>تحديد الموعد</b><small>نتفق على اليوم والمكان عبر واتساب.</small></div>
+      <div class="step reveal"><span>٤</span><b>الجلسة والصور</b><small>الجلسة، ثم تستلمين صورك المعدّلة خلال أسبوع تقريباً.</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="apply">
+  <div class="form-wrap reveal">
+    <span class="eyebrow">استمارة التقديم</span>
+    <h2 style="font-size:clamp(30px,4.4vw,44px);margin:14px 0 6px">قدّمي كمودل</h2>
+    <p class="lead" style="margin-bottom:0">التقديم لا يعني قبول الطلب. سيتم التواصل مع المرشحات المناسبة فقط.</p>
+
+    <form class="mform" id="modelApply" name="model-application" method="POST"
+          action="/model/" enctype="multipart/form-data"
+          data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="model-application">
+      <input type="hidden" name="request_id" id="requestId">
+      <p class="hp"><label>لا تملئي هذا الحقل <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="f"><label for="full_name">الاسم الكامل *</label>
+        <input id="full_name" name="full_name" required autocomplete="name" placeholder="مثال: إليازية محمد">
+        <span class="msg">الرجاء كتابة الاسم الكامل.</span></div>
+
+      <div class="f"><label for="age">العمر *</label>
+        <input id="age" name="age" type="number" min="18" max="60" inputmode="numeric" required placeholder="١٨ فأكثر">
+        <span class="msg">العمر يجب أن يكون ١٨ سنة فأكثر.</span></div>
+
+      <div class="f"><label for="phone">رقم الواتساب *</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+971 5x xxx xxxx">
+        <span class="msg">أدخلي رقم واتساب صحيح.</span></div>
+
+      <div class="f"><label for="city">الإمارة / المدينة *</label>
+        <select id="city" name="city" required>
+          <option value="">اختاري</option>
+          <option>أبوظبي</option><option>العين</option><option>دبي</option>
+          <option>الشارقة</option><option>عجمان</option><option>أم القيوين</option>
+          <option>رأس الخيمة</option><option>الفجيرة</option>
+        </select>
+        <span class="msg">اختاري المدينة.</span></div>
+
+      <div class="f"><label for="instagram">حساب إنستغرام</label>
+        <input id="instagram" name="instagram" placeholder="@username">
+        <span class="hint">اختياري، لكنه يساعدني أشوف ستايلك.</span></div>
+
+      <div class="f"><label for="nationality">الجنسية</label>
+        <input id="nationality" name="nationality" placeholder="اختياري">
+        <span class="hint">يساعد في تنويع اللوكات وملامح البشرة.</span></div>
+
+      <fieldset class="f full"><legend>نوع البشرة</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="skin_type" value="دهنية"><span>دهنية</span></label>
+          <label class="chip"><input type="radio" name="skin_type" value="جافة"><span>جافة</span></label>
+          <label class="chip"><input type="radio" name="skin_type" value="مختلطة"><span>مختلطة</span></label>
+          <label class="chip"><input type="radio" name="skin_type" value="حساسة"><span>حساسة</span></label>
+          <label class="chip"><input type="radio" name="skin_type" value="عادية"><span>عادية</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="f full"><legend>اللوكات اللي تهمك <span style="color:var(--muted);font-size:13px">(اختاري أكثر من خيار)</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="looks" value="ناعم / يومي"><span>ناعم / يومي</span></label>
+          <label class="chip"><input type="checkbox" name="looks" value="سهرة"><span>سهرة</span></label>
+          <label class="chip"><input type="checkbox" name="looks" value="عروس"><span>عروس</span></label>
+          <label class="chip"><input type="checkbox" name="looks" value="جريء / فني"><span>جريء / فني</span></label>
+          <label class="chip"><input type="checkbox" name="looks" value="مع تسريحة شعر"><span>مع تسريحة شعر</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="f full"><legend>أوقات التوفر <span style="color:var(--muted);font-size:13px">(اختاري أكثر من خيار)</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="availability" value="أيام الأسبوع صباحاً"><span>أيام الأسبوع صباحاً</span></label>
+          <label class="chip"><input type="checkbox" name="availability" value="أيام الأسبوع مساءً"><span>أيام الأسبوع مساءً</span></label>
+          <label class="chip"><input type="checkbox" name="availability" value="نهاية الأسبوع"><span>نهاية الأسبوع</span></label>
+          <label class="chip"><input type="checkbox" name="availability" value="مرن"><span>مرن</span></label>
+        </div>
+      </fieldset>
+
+      <div class="f full"><label for="allergies">حساسية أو حالة جلدية</label>
+        <input id="allergies" name="allergies" placeholder="مثال: حساسية من اللاتكس / لا يوجد">
+        <span class="hint">مهم جداً لسلامتك — إذا ما فيه، اكتبي «لا يوجد».</span></div>
+
+      <div class="f full"><label for="experience">خبرة سابقة في التصوير</label>
+        <textarea id="experience" name="experience" rows="3" placeholder="اذكري أي جلسات سابقة، أو اكتبي أنها تجربتك الأولى — الاثنين مقبولين."></textarea></div>
+
+      <div class="f full"><label for="notes">ملاحظات إضافية</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="أي شي حابة أعرفه قبل الجلسة."></textarea></div>
+
+      <label class="drop" id="drop" for="photos">
+        <span class="big">⬆</span>
+        <b>أضيفي صورك (٢ إلى ٤ صور) *</b>
+        <small>
+          صورة أمامية وصورة جانبية للوجه — بدون مكياج، بإضاءة طبيعية، وشعر مرفوع عن الوجه.<br>
+          الصور تُصغَّر تلقائياً قبل الإرسال، فما يهم حجمها.
+        </small>
+        <input type="file" id="photos" accept="image/*" multiple>
+      </label>
+      <div class="thumbs" id="thumbs"></div>
+      <span class="f full msg" id="photoMsg" style="display:none">أضيفي صورتين على الأقل.</span>
+
+      <div class="consents" id="consents">
+        <label><input type="checkbox" id="c_age" required> أؤكد أن عمري <b>١٨ سنة أو أكثر</b>.</label>
+        <label><input type="checkbox" id="c_media" required> أوافق على استخدام صور الجلسة ونشرها في حساب YAZI على إنستغرام وفي الموقع لأغراض عرض الأعمال، بدون مقابل مادي.</label>
+        <label><input type="checkbox" id="c_data" required> أوافق على حفظ بياناتي وصوري لغرض التواصل معي بخصوص الجلسات، وأعلم أنه يمكنني طلب حذفها في أي وقت عبر <a href="mailto:hello@yazi.ae">hello@yazi.ae</a>.</label>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" type="submit" id="submitBtn">إرسال الطلب</button>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <div class="mark">✓</div>
+      <h2>وصلنا طلبك</h2>
+      <p>شكراً لك. سيتم مراجعة الطلبات والتواصل مع المرشحات المناسبة خلال ٣ إلى ٥ أيام عبر واتساب.</p>
+      <a href="/">العودة للموقع</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <span>© 2026 YAZI. جميع الحقوق محفوظة.</span>
+    <div><a href="/terms/">الشروط والسياسات</a> &nbsp;·&nbsp; <a href="mailto:hello@yazi.ae">hello@yazi.ae</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var MAX_FILES = 4, MIN_FILES = 2, MAX_EDGE = 1500, QUALITY = 0.82;
+  var files = [];
+
+  var input   = document.getElementById('photos');
+  var drop    = document.getElementById('drop');
+  var thumbs  = document.getElementById('thumbs');
+  var photoMsg= document.getElementById('photoMsg');
+  var form    = document.getElementById('modelApply');
+  var status  = document.getElementById('status');
+  var btn     = document.getElementById('submitBtn');
+  var done    = document.getElementById('done');
+  var consents= document.getElementById('consents');
+
+  document.getElementById('requestId').value =
+    'MDL-' + Date.now().toString(36).toUpperCase() + '-' +
+    Math.random().toString(36).slice(2,6).toUpperCase();
+
+  /* ---------- image compression ---------- */
+  function compress(file){
+    return new Promise(function(resolve){
+      if(!/^image\//.test(file.type)) return resolve(null);
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function(){
+        var w = img.naturalWidth, h = img.naturalHeight;
+        var scale = Math.min(1, MAX_EDGE / Math.max(w, h));
+        var cw = Math.round(w * scale), ch = Math.round(h * scale);
+        var cv = document.createElement('canvas');
+        cv.width = cw; cv.height = ch;
+        cv.getContext('2d').drawImage(img, 0, 0, cw, ch);
+        cv.toBlob(function(blob){
+          URL.revokeObjectURL(url);
+          if(!blob) return resolve(null);
+          resolve({ blob: blob, preview: cv.toDataURL('image/jpeg', 0.6),
+                    kb: Math.round(blob.size/1024) });
+        }, 'image/jpeg', QUALITY);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); resolve(null); };
+      img.src = url;
+    });
+  }
+
+  function render(){
+    thumbs.innerHTML = '';
+    files.forEach(function(f, i){
+      var d = document.createElement('div');
+      d.className = 'thumb';
+      d.innerHTML = '<img src="'+f.preview+'" alt="">' +
+                    '<em>'+f.kb+' KB</em>' +
+                    '<button type="button" aria-label="حذف الصورة">×</button>';
+      d.querySelector('button').onclick = function(){ files.splice(i,1); render(); };
+      thumbs.appendChild(d);
+    });
+    if(files.length) photoMsg.style.display = 'none';
+  }
+
+  function addFiles(list){
+    var arr = Array.prototype.slice.call(list);
+    if(!arr.length) return;
+    status.textContent = 'جاري تجهيز الصور…';
+    status.className = 'status work';
+    var jobs = arr.slice(0, MAX_FILES - files.length).map(compress);
+    Promise.all(jobs).then(function(res){
+      res.forEach(function(r){ if(r) files.push(r); });
+      render();
+      status.textContent = files.length >= MAX_FILES ? 'وصلتِ الحد الأقصى (٤ صور).' : '';
+      status.className = 'status';
+    });
+  }
+
+  input.addEventListener('change', function(){ addFiles(input.files); input.value=''; });
+  ['dragenter','dragover'].forEach(function(e){
+    drop.addEventListener(e, function(ev){ ev.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave','drop'].forEach(function(e){
+    drop.addEventListener(e, function(ev){ ev.preventDefault(); drop.classList.remove('over'); });
+  });
+  drop.addEventListener('drop', function(ev){
+    if(ev.dataTransfer && ev.dataTransfer.files) addFiles(ev.dataTransfer.files);
+  });
+
+  /* ---------- validation ---------- */
+  function fail(el, on){
+    var box = el.closest('.f');
+    if(box) box.classList.toggle('err', on);
+  }
+
+  function validate(){
+    var ok = true, first = null;
+    ['full_name','phone','city'].forEach(function(n){
+      var el = form.elements[n];
+      var bad = !el.value.trim();
+      fail(el, bad); if(bad){ ok = false; first = first || el; }
+    });
+    var age = form.elements['age'];
+    var ageBad = !age.value || Number(age.value) < 18 || Number(age.value) > 60;
+    fail(age, ageBad); if(ageBad){ ok = false; first = first || age; }
+
+    var ph = form.elements['phone'];
+    var digits = (ph.value.match(/\d/g)||[]).length;
+    if(!ageBad && digits < 8){ fail(ph, true); ok = false; first = first || ph; }
+
+    if(files.length < MIN_FILES){
+      photoMsg.style.display = 'block';
+      ok = false; first = first || drop;
+    }
+
+    var cOk = ['c_age','c_media','c_data'].every(function(id){
+      return document.getElementById(id).checked;
+    });
+    consents.classList.toggle('err', !cOk);
+    if(!cOk){ ok = false; first = first || consents; }
+
+    if(first && first.scrollIntoView) first.scrollIntoView({behavior:'smooth', block:'center'});
+    return ok;
+  }
+
+  /* ---------- submit ---------- */
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.textContent = ''; status.className = 'status';
+
+    if(!validate()){
+      status.textContent = 'الرجاء إكمال الحقول المطلوبة.';
+      status.className = 'status bad';
+      return;
+    }
+
+    btn.disabled = true;
+    status.textContent = 'جاري الإرسال…';
+    status.className = 'status work';
+
+    var fd = new FormData(form);
+    fd.delete('photos');
+    files.forEach(function(f, i){
+      fd.append('photo_' + (i+1), f.blob, 'photo_' + (i+1) + '.jpg');
+    });
+    fd.append('photos_count', String(files.length));
+    fd.append('consent_age', 'نعم');
+    fd.append('consent_media', 'نعم');
+    fd.append('consent_data', 'نعم');
+
+    fetch(form.getAttribute('action'), { method:'POST', body: fd })
+      .then(function(r){
+        if(!r.ok) throw new Error(r.status);
+        form.hidden = true;
+        done.hidden = false;
+        done.scrollIntoView({behavior:'smooth', block:'center'});
+      })
+      .catch(function(){
+        btn.disabled = false;
+        status.className = 'status bad';
+        status.innerHTML = 'تعذّر الإرسال. جرّبي مرة ثانية أو راسليني على ' +
+          '<a style="text-decoration:underline" href="https://wa.me/971509149431" target="_blank" rel="noopener">واتساب</a>.';
+      });
+  });
+
+  form.addEventListener('input', function(e){
+    if(e.target.closest('.f')) e.target.closest('.f').classList.remove('err');
+  });
+  consents.addEventListener('change', function(){ consents.classList.remove('err'); });
+
+  /* ---------- reveal ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
