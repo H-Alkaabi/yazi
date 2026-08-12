@@ -17,6 +17,16 @@
     "EMAIL_FROM": "YAZI Models <models@notify.yazi.ae>"
   },
 
+"vars": {
+  "NOTIFY_EMAIL": "hello@yazi.ae",
+  "EMAIL_FROM": "YAZI Models <models@notify.yazi.ae>",
+
+  "WHATSAPP_PHONE_NUMBER_ID": "سنأخذه من Meta",
+  "WHATSAPP_NOTIFY_TO": "971509149431",
+  "WHATSAPP_TEMPLATE_NAME": "new_model_application",
+  "WHATSAPP_TEMPLATE_LANG": "ar"
+},
+
   "d1_databases": [
     {
       "binding": "DB",
