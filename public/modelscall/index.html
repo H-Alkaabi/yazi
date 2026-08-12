@@ -7,7 +7,7 @@
 <meta name="description" content="YAZI تبحث عن وجوه جديدة لجلسات مكياج وتصوير في الإمارات. مكياج احترافي مجاناً وصور جاهزة لحسابك. قدّمي طلبك الآن.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#fbf7f3">
-<link rel="canonical" href="https://yazi.ae/model/">
+<link rel="canonical" href="https://yazi.ae/modelscall/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <meta property="og:locale" content="ar_AE">
 <meta property="og:title" content="انضمي كمودل مع YAZI">
 <meta property="og:description" content="وجوه جديدة لجلسات مكياج وتصوير — مكياج احترافي مجاناً وصور جاهزة لحسابك.">
-<meta property="og:url" content="https://yazi.ae/model/">
+<meta property="og:url" content="https://yazi.ae/modelscall/">
 <meta property="og:image" content="https://yazi.ae/assets/hero.png">
 
 <style>
@@ -200,9 +200,7 @@ legend{font-size:15px;margin-bottom:10px}
     <p class="lead" style="margin-bottom:0">التقديم لا يعني قبول الطلب. سيتم التواصل مع المرشحات المناسبة فقط.</p>
 
     <form class="mform" id="modelApply" name="model-application" method="POST"
-          action="/model/" enctype="multipart/form-data"
-          data-netlify="true" netlify-honeypot="bot-field" novalidate>
-      <input type="hidden" name="form-name" value="model-application">
+          action="/api/model-applications" enctype="multipart/form-data" novalidate>
       <input type="hidden" name="request_id" id="requestId">
       <p class="hp"><label>لا تملئي هذا الحقل <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
@@ -463,13 +461,16 @@ legend{font-size:15px;margin-bottom:10px}
     fd.append('consent_data', 'نعم');
 
     fetch(form.getAttribute('action'), { method:'POST', body: fd })
-      .then(function(r){
-        if(!r.ok) throw new Error(r.status);
+      .then(async function(r){
+        var data = {};
+        try { data = await r.json(); } catch(_){}
+        if(!r.ok) throw new Error(data.error || ('HTTP ' + r.status));
         form.hidden = true;
         done.hidden = false;
         done.scrollIntoView({behavior:'smooth', block:'center'});
       })
-      .catch(function(){
+      .catch(function(err){
+        console.error('Model application failed:', err);
         btn.disabled = false;
         status.className = 'status bad';
         status.innerHTML = 'تعذّر الإرسال. جرّبي مرة ثانية أو راسليني على ' +
