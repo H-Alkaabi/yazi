@@ -3,7 +3,6 @@
   "name": "yazi",
   "main": "./src/index.js",
   "compatibility_date": "2026-08-11",
-
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
@@ -11,7 +10,6 @@
       "/api/*"
     ]
   },
-
   "d1_databases": [
     {
       "binding": "DB",
@@ -20,11 +18,10 @@
       "migrations_dir": "migrations"
     }
   ],
-
   "r2_buckets": [
     {
       "binding": "MODEL_UPLOADS",
-      "bucket_name": "اسم-البوكت-الفعلي"
+      "bucket_name": "yazi-model-uploads"
     }
   ]
 }
