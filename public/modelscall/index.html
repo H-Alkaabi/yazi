@@ -142,7 +142,15 @@ legend{font-size:15px;margin-bottom:10px}
 
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
-
+.js .reveal{
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity .5s ease, transform .5s ease;
+}
+  .js .reveal.in{
+  opacity:1;
+  transform:none;
+}
 @media(max-width:900px){
   .cards,.steps{grid-template-columns:1fr 1fr}
   .form-wrap{padding:32px 24px;border-radius:28px}
@@ -165,7 +173,9 @@ legend{font-size:15px;margin-bottom:10px}
 </style>
 </head>
 <body>
-
+<script>
+document.documentElement.classList.add('js');
+</script>
 <header class="mh">
   <div class="mh-in">
     <a class="mh-logo" href="/" aria-label="YAZI الرئيسية"><img src="/assets/yazi-logo.png" alt="YAZI Makeup Artist"></a>
