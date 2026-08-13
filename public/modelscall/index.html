@@ -534,8 +534,8 @@ document.documentElement.classList.add('js');
         try { data = await r.json(); } catch(_){}
         if(!r.ok) throw new Error(data.error || ('HTTP ' + r.status));
 
-if (window.ttq) {
-  ttq.track('Lead');
+if (window.ttq && typeof window.ttq.track === 'function') {
+  window.ttq.track('SubmitApplication');
 }
 
 form.hidden = true;
