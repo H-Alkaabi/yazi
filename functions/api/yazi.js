@@ -2,7 +2,7 @@ const BUSINESS = {
   email: 'hello@yazi.ae',
   whatsapp: '971509149431',
   services: { 'مكياج عادي':500, 'مكياج مرافقات':450, 'مكياج سهرة':600, 'مكياج عروس':2100 },
-  hairPrice:150, depositRate:.5,
+  hairPrice:170, depositRate:.5,
 };
 const DEFAULT_SETTINGS={slot_buffer_minutes:0,lead_hours:0};
 const enc=new TextEncoder();

@@ -202,7 +202,7 @@
       +
       (
         hair?.checked
-          ? 150
+          ? 170
           : 0
       );
 
@@ -242,6 +242,45 @@
 
 
   updatePrice();
+
+  /* =========================================================
+     PORTFOLIO CAROUSEL
+     ========================================================= */
+
+  const carousel=$('[data-carousel]');
+
+  if(carousel){
+    const track=$('.carousel-track',carousel);
+    const status=$('.carousel-status',carousel);
+    const images=Array.from({length:10},(_,i)=>i+1);
+
+    for(let i=images.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [images[i],images[j]]=[images[j],images[i]];
+    }
+
+    images.forEach((number,index)=>{
+      const link=document.createElement('a');
+      link.className='carousel-slide';
+      link.href='/portfolio/';
+      link.setAttribute('aria-label',`عرض العمل ${index+1} في معرض الأعمال`);
+      link.innerHTML=`<img src="/assets/gallery-${String(number).padStart(2,'0')}.webp" loading="lazy" width="800" height="1000" alt="إطلالة مكياج من أعمال YAZI">`;
+      track?.append(link);
+    });
+
+    let current=0;
+    const visible=()=>matchMedia('(max-width: 700px)').matches?1:matchMedia('(max-width: 900px)').matches?2:3;
+    const render=()=>{
+      const count=visible();
+      current=Math.min(current,Math.max(0,images.length-count));
+      track.style.transform=`translateX(-${current*(100/count)}%)`;
+      status.textContent=`${current+1}–${Math.min(current+count,images.length)} / ${images.length}`;
+    };
+    $('.carousel-prev',carousel)?.addEventListener('click',()=>{current=Math.max(0,current-1);render()});
+    $('.carousel-next',carousel)?.addEventListener('click',()=>{current=Math.min(images.length-visible(),current+1);render()});
+    addEventListener('resize',render,{passive:true});
+    render();
+  }
 
 
   /* =========================================================
