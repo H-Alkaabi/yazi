@@ -30,7 +30,7 @@
     "image":"https://yazi.ae/assets/hero.png",
     "areaServed":{"@type":"Country","name":"United Arab Emirates"},
     "priceRange":"AED 450-2100",
-    "sameAs":["https://www.instagram.com/makeupbyyazi/"]
+    "sameAs":["https://www.instagram.com/makeupbyyazi/","https://www.tiktok.com/@makeupbyyazi"]
   }
   </script>
 </head>
@@ -58,7 +58,7 @@
     <div class="nav-social" aria-label="روابط التواصل">
       <a href="https://www.instagram.com/makeupbyyazi/" target="_blank" rel="noopener">IG</a>
       <a href="https://wa.me/971509149431" target="_blank" rel="noopener">WA</a>
-      <span title="سيتم ربطه بعد اعتماد الحساب">TT</span>
+      <a href="https://www.tiktok.com/@makeupbyyazi" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
     </div>
 
     <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false">
@@ -103,7 +103,7 @@
     <article class="service-card reveal" data-service="مكياج سهرة"><div class="line-icon">✧</div><h3>مكياج سهرة</h3><p>إطلالة أكثر تحديداً وثباتاً للسهرات والمناسبات.</p><strong>600 د.إ</strong><button type="button" class="service-pick">اختيار الخدمة</button></article>
     <article class="service-card reveal" data-service="مكياج عروس"><div class="line-icon">♕</div><h3>مكياج عروس</h3><p>لوك عروس متكامل مع اهتمام خاص بالتفاصيل والتصوير.</p><strong>2,100 د.إ</strong><button type="button" class="service-pick">اختيار الخدمة</button></article>
   </div>
-  <div class="addon-note reveal"><span>إضافة الشعر</span><strong>+150 د.إ</strong><small>العربون المطلوب لتثبيت الحجز: 50% من قيمة الخدمة.</small></div>
+  <div class="addon-note reveal"><span>إضافة الشعر</span><strong>+170 د.إ</strong><small>العربون المطلوب لتثبيت الحجز: 50% من قيمة الخدمة.</small></div>
 </section>
 
 <section class="availability section" id="availability">
@@ -119,11 +119,16 @@
 </section>
 
 <section class="work section" id="work">
-  <div class="section-head split"><div><span>من أعمالي</span><h2>إطلالات وتفاصيل</h2></div><a href="#booking">احجزي لوكك</a></div>
-  <div class="gallery">
-    <figure class="wide reveal"><img src="/assets/gallery-3.webp" loading="lazy" width="900" height="700" alt="مكياج عيون ناعم"></figure>
-    <figure class="reveal"><img src="/assets/gallery-2.webp" loading="lazy" width="700" height="700" alt="إطلالة مكياج سهرة"></figure>
-    <figure class="reveal"><img src="/assets/gallery-1.webp" loading="lazy" width="700" height="700" alt="أدوات ومنتجات مكياج"></figure>
+  <div class="section-head split"><div><span>من أعمالي</span><h2>إطلالات وتفاصيل</h2></div><a class="btn ghost portfolio-all" href="/portfolio/">عرض جميع الأعمال</a></div>
+  <div class="portfolio-carousel reveal" data-carousel aria-label="مختارات من أعمال YAZI">
+    <div class="carousel-viewport">
+      <div class="carousel-track"></div>
+    </div>
+    <div class="carousel-controls">
+      <button type="button" class="carousel-arrow carousel-prev" aria-label="العمل السابق">→</button>
+      <div class="carousel-status" aria-live="polite"></div>
+      <button type="button" class="carousel-arrow carousel-next" aria-label="العمل التالي">←</button>
+    </div>
   </div>
 </section>
 
@@ -149,7 +154,7 @@
       <fieldset class="choice-field full"><legend>مكان تقديم الخدمة *</legend><div class="choice-row"><label class="choice-card"><input type="radio" name="location_type" value="studio" required><span><b>الاستوديو</b><small>سيتم إرسال التفاصيل بعد التأكيد</small></span></label><label class="choice-card"><input type="radio" name="location_type" value="home" required><span><b>موقع العميلة</b><small>أدخلي العنوان أو اسم القاعة</small></span></label></div></fieldset>
       <div class="field full conditional-address" hidden><label for="address">الموقع / اسم القاعة *</label><input id="address" name="address" autocomplete="street-address" placeholder="المنطقة، اسم القاعة أو رابط/وصف الموقع"></div>
 
-      <label class="addon-toggle full"><input type="checkbox" id="hair" name="hair"><span><b>إضافة تسريحة شعر</b><small>+150 د.إ</small></span></label>
+      <label class="addon-toggle full"><input type="checkbox" id="hair" name="hair"><span><b>إضافة تسريحة شعر</b><small>+170 د.إ</small></span></label>
       <div class="price-box full" id="priceBox" aria-live="polite"><div><span>قيمة الخدمة</span><strong id="priceTotal">—</strong></div><div><span>العربون 50%</span><strong id="depositTotal">—</strong></div></div>
 
       <div class="field full"><label for="notes">ملاحظات إضافية</label><textarea id="notes" name="notes" rows="4" placeholder="لون الفستان، نوع الإطلالة، حساسية من منتجات معينة..."></textarea></div>
@@ -184,7 +189,7 @@
   <div class="faq-list">
     <details><summary>متى يصبح الموعد مؤكداً؟</summary><p>الطلب المرسل عبر الموقع مبدئي. يصبح الحجز مؤكداً بعد التواصل وتثبيت العربون.</p></details>
     <details><summary>كم قيمة العربون؟</summary><p>العربون 50% من قيمة الخدمة والإضافات، ويُحتسب من المبلغ النهائي.</p></details>
-    <details><summary>هل يمكن طلب الشعر مع المكياج؟</summary><p>نعم، يمكن اختيار إضافة الشعر أثناء الحجز بقيمة 150 د.إ.</p></details>
+    <details><summary>هل يمكن طلب الشعر مع المكياج؟</summary><p>نعم، يمكن اختيار إضافة الشعر أثناء الحجز بقيمة 170 د.إ.</p></details>
   </div>
 </section>
 </main>
@@ -193,7 +198,7 @@
   <div class="footer-main">
     <div class="footer-brand"><strong>يازي</strong><span>YAZI MAKEUP ARTIST</span></div>
     <p>للحجز والاستفسار، تواصلي عبر واتساب أو البريد الرسمي.</p>
-    <div class="footer-contact"><a href="https://wa.me/971509149431" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hello@yazi.ae">hello@yazi.ae</a><a href="https://www.instagram.com/makeupbyyazi/" target="_blank" rel="noopener">Instagram</a><span class="social-pending" title="سيتم ربطه بعد اعتماد الحساب">TikTok — قريباً</span></div>
+    <div class="footer-contact"><a href="https://wa.me/971509149431" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hello@yazi.ae">hello@yazi.ae</a><a href="https://www.instagram.com/makeupbyyazi/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@makeupbyyazi" target="_blank" rel="noopener">TikTok @makeupbyyazi</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 YAZI. جميع الحقوق محفوظة.</span><div><a href="/terms/">سياسة الحجز والإلغاء والشروط</a></div></div>
 </footer>
